@@ -1,0 +1,96 @@
+.list-header {
+  background: $off-white;
+  border: 1px solid darken($off-white, 7%);
+  color: $grey;
+  display: flex;
+  padding: $s-size $m-size;
+}
+
+.list-body {
+  margin-bottom: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+  }
+}
+
+.list-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid darken($off-white, 7%);
+  border-top: none;
+  color: $dark-grey;
+  padding: $s-size;
+  transition: background .3s ease;
+  &:hover {
+    background: $off-white;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    flex-wrap: nowrap;
+    padding: $m-size;
+  }
+}
+
+.list-item__title {
+  flex-grow: 1;
+  width: 100%;
+  @media (min-width: $desktop-breakpoint) {
+    flex-grow: 0;
+  }
+}
+
+.list-item__date {
+  color: $grey;
+  font-size: $font-size-small;
+  align-self: center;
+}
+
+.list-item__duration {
+  color: $grey;
+  font-size: $font-size-small;
+  align-self: center;
+  padding-left: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    padding-left: 0;
+  }
+}
+
+.list-item__price {
+  margin: 0;
+  align-self: center;
+  font-size: $font-size-small;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: right;
+  @media (min-width: $desktop-breakpoint) {
+    padding-left: $s-size;
+    font-size: $font-size-large;
+    font-weight: 500;
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .list-header div:nth-child(1),
+  .list-item__title {
+    width: 45%;
+  }
+
+  .list-header div:nth-child(2),
+  .list-item__date {
+    width: 25%;
+    text-align: center;
+  }
+
+  .list-header div:nth-child(3),
+  .list-item__duration {
+    width: 15%;
+    text-align: center;
+  }
+
+  .list-header div:nth-child(4),
+  .list-item__price {
+    width: 15%;
+    text-align: center;
+  }
+}

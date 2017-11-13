@@ -1,0 +1,25 @@
+.list-filters {
+  margin: $m-size 0;
+}
+
+.list-filters__filters {
+  margin-bottom: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+.list-filters__filters button {
+  margin-right: $s-size;
+  margin-top: $s-size;
+}
+
+.list-filters__filters input {
+  width: 100%;
+  padding: $s-size;
+  border: 1px solid darken($off-white, 7%);
+}
+
+.list-filters__show button {
+  width: 100%;
+}
